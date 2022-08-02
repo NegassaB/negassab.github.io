@@ -29,6 +29,9 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="static/img/logo.png" width="32" height="32"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
@@ -47,16 +50,37 @@
                     </li>
                     <li class="nav-item">
                         <!-- todo: change this to button -->
-                        <a class="nav-link" href="#">Resumé</a>
+                        <button class="btn btn-outline-success" href="#">Resumé</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="container">
-
+    <main>
+        <div class="text-secondary container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="static/img/logo.png" class="d-block mx-lg-auto img-fluid" alt="me smiling :)" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <span><p>Hi, my name is</p></span>
+                    <h1 class="display-5 fw-bolder lh-1 mb-3">Negassa Berhanu</h1>
+                    <p class="text-lowercase lead fw-lighter">
+                        A Software Engineer with 5+ years of industrial experience in various Ethiopian companies 
+                        in the areas of management, backend development, UX design using multiple programming languages and
+                        frameworks.
+                    </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2">Contact Me</button>
+                    <button type="button" class="btn btn-outline-success btn-lg px-4">Resumé</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-example-divider"></div>
     </main>
         
         <script src="static/js/bootstrap.min.js" async defer></script>
+        <script src="static/js/masonry.pkgd.min.js" async defer></script>
     </body>
 </html>
