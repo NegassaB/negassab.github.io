@@ -29,34 +29,91 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="static/img/logo.png" width="32" height="32"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link text-white" href="#about_me">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Previous Works</a>
+                        <a class="nav-link text-white" href="#">Previous Works</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav justify-content-end mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Me</a>
+                        <a class="nav-link text-white" href="#">Contact Me</a>
                     </li>
                     <li class="nav-item">
                         <!-- todo: change this to button -->
-                        <a class="nav-link" href="#">Resumé</a>
+                        <button class="btn btn-outline-success" href="#">
+                            <span class="text-white">Resumé</span>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="container">
-
+    <main>
+        <div class="text-secondary container col-xxl-8 px-4 py-5" id="home">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="static/img/logo.png" class="d-block mx-lg-auto img-fluid" alt="me smiling :)" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <span><p>Hi, my name is</p></span>
+                    <h1 class="display-5 fw-bolder lh-1 mb-3">Negassa Berhanu</h1>
+                    <p class="text-lowercase lead fw-lighter">
+                        A Software Engineer with 5+ years of industrial experience in various Ethiopian companies 
+                        in the areas of management, backend development, UX design using multiple programming languages and
+                        frameworks.
+                    </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2">Contact Me</button>
+                    <button type="button" class="btn btn-outline-success btn-lg px-4">Resumé</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-secondary px-4 py-5 text-center" id="about_me">
+                <h2 class="display-5 fw-light">About Me</h2>
+                    <div class="col-lg-12">
+                        <p class="fs-5 mb-4">
+                            Hello there :)! My name is Negassa and I enjoy creating dope things that live on computers,
+                            local or remote. My interest in computers started wayback when I was a 9 year old and
+                            my father brought home a heavy laptop. I tried to type my name on there and the moment
+                            I pressed <code>N</code> and I saw it on the screen I was hooked. There was no looking back from there on.<br>
+                            Fast forward and I'm now a graduate of <a href="https://www.astu.edu.et/">Adama Science & Technology
+                                University</a>
+                            and have built several bots, websites, web services, SMS services, backend services & APIs etc.
+                            My main focus these days is building accessible, simple yet powerful tools & digital products that can simplify
+                            business processes and their interactions with their customers.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4">
+                            <p class="fs-5 mb-4">Here are a few technologies of I work with:</p>
+                                <ul class="list-group justify-content-center">
+                                    <li class="list-group-item">Python</li>
+                                    <li class="list-group-item">Django</li>
+                                    <li class="list-group-item">html, css3</li>
+                                    <li class="list-group-item">bootstrap</li>
+                                    <li class="list-group-item">Django Rest Framework</li>
+                                    <li class="list-group-item">FastAPI</li>
+                                    <li class="list-group-item">Telethon</li>
+                                </ul>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+        </div>
     </main>
         
         <script src="static/js/bootstrap.min.js" async defer></script>
+        <script src="static/js/masonry.pkgd.min.js" async defer></script>
     </body>
 </html>
