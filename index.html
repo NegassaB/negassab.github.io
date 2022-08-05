@@ -6,7 +6,6 @@
 <html>
     <head>
         <!-- todo: 1. splash screen -->-->
-        <!-- todo: make the contact section work, or convert it to email -->
         <!-- todo: sidebar of my social links namely telegram, reddit, github -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -330,44 +329,32 @@
         </div>
         <div class="text-secondary container px-4 py-3" id="contact_me">
             <h2 class="display-5 fw-light text-center">Contact Me</h2>
-            <div class="row align-items-center g-5 py-5">
+            <div class="row align-items-center g-5 pt-5">
                 <div class="col-lg-3"></div>
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <form id="contactForm" action="mailto:negassab16@gmail.com" method="post" enctype="text/plain">
-                        <div class="mb-3">
-                            <label class="form-label" for="name">Name</label>
-                            <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validation="required" />
-                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                    <p class="lead">I'm always happy to try out new project, new opportunities and new challenges. You can reach me via the following: </p>
+                    <div class="row pt-4">
+                        <div class="col-lg-3">
+                            <a type="button" class="btn btn-outline-success btn-lg px-4" href="mailto:negassab16@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-mailbox2"></i>
+                            </a>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="emailAddress">Email Address</label>
-                            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
-                                data-sb-validation="required, email" />
-                                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">
-                                    Email Address is required.
-                                </div>
-                                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">
-                                    Email Address Email is not valid.
-                                </div>
+                        <div class="col-lg-3">
+                            <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://github.com/NegassaB" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                            </a>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="message">Message</label>
-                            <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"
-                                data-sb-validation="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                        <div class="col-lg-3">
+                            <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://reddit.com/u/NegassaB" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-reddit"></i>
+                            </a>
                         </div>
-                        <!-- Form submissions success message -->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">Form submission successful!</div>
+                        <div class="col-lg-3">
+                            <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://t.me/NegassaB" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-telegram"></i>
+                            </a>
                         </div>
-                        <!-- Form submissions error message -->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <div class="d-grid">
-                            <button class="btn btn-outline-success btn-lg" id="submitButton" type="submit">Submit</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
