@@ -7,6 +7,7 @@
     <head>
         <!-- todo: 1. splash screen -->-->
         <!-- todo: make the contact section work, or convert it to email -->
+        <!-- todo: sidebar of my social links namely telegram, reddit, github -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Negassa Berhanu -- index</title>
@@ -332,7 +333,7 @@
             <div class="row align-items-center g-5 py-5">
                 <div class="col-lg-3"></div>
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <form id="contactForm">
+                    <form id="contactForm" action="mailto:negassab16@gmail.com" method="post" enctype="text/plain">
                         <div class="mb-3">
                             <label class="form-label" for="name">Name</label>
                             <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validation="required" />
@@ -364,7 +365,7 @@
                             <div class="text-center text-danger mb-3">Error sending message!</div>
                         </div>
                         <div class="d-grid">
-                            <button class="btn btn-outline-success btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                            <button class="btn btn-outline-success btn-lg" id="submitButton" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
