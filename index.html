@@ -22,7 +22,6 @@
     </head>
     <body>
         <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
-
         <nav class="navbar navbar-expand-md bg-transparent fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home"><img src="static/img/logo.png" width="32" height="32"></a>
@@ -54,340 +53,372 @@
             </div>
         </div>
         </nav>
-        <main>
-            <div class="text-secondary container col-xxl-8 px-4 pt-5 pb-3" id="home">
-                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="static/img/logo.png" class="d-block mx-lg-auto img-fluid" alt="me smiling :)" width="700" height="500" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <span><p>Hi, my name is</p></span>
-                        <h1 class="display-5 fw-bolder lh-1 mb-3">Negassa Berhanu</h1>
-                        <p class="text-lowercase lead fw-lighter">
-                            A Software Engineer with 5+ years of industrial experience in various Ethiopian companies 
-                            in the areas of management, backend development, UX design using multiple programming languages and
-                            frameworks.
-                        </p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a type="button" href="#contact_me" class="btn btn-outline-dark btn-lg px-4 me-md-2">Contact Me</a>
-                        <a type="button" href="static/doc/betterCV.pdf" class="btn btn-outline-success btn-lg px-4" target="_blank" rel="noopener noreferrer">
-                            Resumé
+        <main class="row">
+            <div class="fixed-top px-5 py-5 col-lg-1 d-none d-md-block d-lg-block d-xl-block">
+                <div class="py-5"></div>
+                <div class="py-5"></div>
+                <div class="row">
+                    <div class="d-flex align-items-center pb-3">
+                        <a type="button" class="btn btn-outline-success btn-lg" href="mailto:negassab16@gmail.com" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="bi bi-mailbox2"></i>
                         </a>
                     </div>
+                    <div class="d-flex align-items-center py-3">
+                        <a class="btn btn-outline-success btn-lg" href="https://github.com/NegassaB/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center py-3">
+                        <a class="btn btn-outline-success btn-lg" href="https://reddit.com/u/NegassaB" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="bi bi-reddit""></i>
+                        </a>
+                    </div>
+                    <div class=" d-flex align-items-center py-3">
+                        <a class="btn btn-outline-success btn-lg" href="https://t.me/NegassaB" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="bi bi-telegram""></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="text-secondary px-4 pt-0 text-center" id="about_me">
-                    <div class="row">
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
-                            <h2 class="display-5 fw-light">About Me</h2>
-                            <p class="fs-5 mb-4 text-wrap">
-                                Hello there <i class="bi bi-emoji-smile"></i>! My name is Negassa and I enjoy creating dope things that live on computers,
-                                local or remote. My interest in computers started wayback when I was a 9 year old and
-                                my father brought home a heavy laptop. I tried to type my name on there and the moment
-                                I pressed <code>N</code> and I saw it on the screen I was hooked. There was no looking back from there on.<br>
-                                Fast forward and I'm now a graduate of <a href="https://www.astu.edu.et/">Adama Science & Technology
-                                    University</a>
-                                and have built several bots, websites, web services, SMS services, backend services & APIs etc.
-                                My main focus these days is building accessible, simple yet powerful tools & digital products that can simplify
-                                business processes and their interactions with their customers.
+            <div class="col-lg-11">
+                <div class="text-secondary container col-xxl-8 px-4 pt-5 pb-3" id="home">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <img src="static/img/logo.png" class="d-block mx-lg-auto img-fluid" alt="me smiling :)" width="700" height="500" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <span><p>Hi, my name is</p></span>
+                            <h1 class="display-5 fw-bolder lh-1 mb-3">Negassa Berhanu</h1>
+                            <p class="text-lowercase lead fw-lighter">
+                                A Software Engineer with 5+ years of industrial experience in various Ethiopian companies 
+                                in the areas of management, backend development, UX design using multiple programming languages and
+                                frameworks.
                             </p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <a type="button" href="#contact_me" class="btn btn-outline-dark btn-lg px-4 me-md-2">Contact Me</a>
+                            <a type="button" href="static/doc/betterCV.pdf" class="btn btn-outline-success btn-lg px-4" target="_blank" rel="noopener noreferrer">
+                                Resumé
+                            </a>
                         </div>
-                        <div class="col-lg-2"></div>
+                        </div>
                     </div>
+                </div>
+                <div class="text-secondary px-4 pt-0 text-center" id="about_me">
                         <div class="row">
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-4">
-                                <p class="fs-5 mb-4">Here are a few technologies of I work with:</p>
-                                <ul class="text-secondary list-group justify-content-center">
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/python-logo.png" width="50" height="50"> Python
-                                    </li>
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/django-logo.png" width="50" height="50"> Django
-                                    </li>
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/html-and-css-logo.png" width="70" height="70"> html, css3
-                                    </li>
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/Bootstrap_logo.png" width="50" height="50"> bootstrap
-                                    </li>
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/drf-logo.png" width="100" height="50"> Django ReST
-                                    </li>
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/fastapi-logo.png" width="50" height="50"> FastAPI
-                                    </li>
-                                    <li class="list-group-item list-group-item-dark">
-                                        <img src="static/img/telethon-logo.png" width="50" height="50"> Telethon
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4"></div>
-                        </div>
-            </div>
-            <div class="text-secondary container px-4 pt-5" id="prev_works">
-                <h2 class="display-5 fw-light text-center pb-5">Some of the things I've built</h2>
-                <div class="row mx-auto w-75" data-masonary="{" percentPosition": true}">
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/sms.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">api.sms.et</h5>
-                                <p class="card-body">a simple, efficient & cheap SMS platform for businesses.<br>
-                                    <code>python3</code>, <code>Django</code>, <code>Django ReST</code>
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <h2 class="display-5 fw-light">About Me</h2>
+                                <p class="fs-5 mb-4 text-wrap">
+                                    Hello there <i class="bi bi-emoji-smile"></i>! My name is Negassa and I enjoy creating dope things that live on computers,
+                                    local or remote. My interest in computers started wayback when I was a 9 year old and
+                                    my father brought home a heavy laptop. I tried to type my name on there and the moment
+                                    I pressed <code>N</code> and I saw it on the screen I was hooked. There was no looking back from there on.<br>
+                                    Fast forward and I'm now a graduate of <a href="https://www.astu.edu.et/">Adama Science & Technology
+                                        University</a>
+                                    and have built several bots, websites, web services, SMS services, backend services & APIs etc.
+                                    My main focus these days is building accessible, simple yet powerful tools & digital products that can simplify
+                                    business processes and their interactions with their customers.
                                 </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/api.sms.et_production" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
                             </div>
+                            <div class="col-lg-2"></div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/happy-review.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">happy-review-api</h5>
-                                <p class="card-body">a simple api that connects to the happy-review UI to collect data.<br>
-                                    <code>python3</code>, <code>FastAPI</code>, <code>bootstrap</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/happy-review-api" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                            <div class="row">
+                                <div class="col-lg-4"></div>
+                                <div class="col-lg-4">
+                                    <p class="fs-5 mb-4">Here are a few technologies of I work with:</p>
+                                    <ul class="text-secondary list-group justify-content-center">
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/python-logo.png" width="50" height="50"> Python
+                                        </li>
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/django-logo.png" width="50" height="50"> Django
+                                        </li>
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/html-and-css-logo.png" width="70" height="70"> html, css3
+                                        </li>
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/Bootstrap_logo.png" width="50" height="50"> bootstrap
+                                        </li>
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/drf-logo.png" width="100" height="50"> Django ReST
+                                        </li>
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/fastapi-logo.png" width="50" height="50"> FastAPI
+                                        </li>
+                                        <li class="list-group-item list-group-item-dark">
+                                            <img src="static/img/telethon-logo.png" width="50" height="50"> Telethon
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/form-creator.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Django Form Creator (Contributer)</h5>
-                                <p class="card-body">A Django application that lets users create forms.<br>
-                                <code>Python3</code>, <code>Django</code>, <code>PyTests</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/django-form-creator" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                </div>
+                <div class="text-secondary container px-4 pt-5" id="prev_works">
+                    <h2 class="display-5 fw-light text-center pb-5">Some of the things I've built</h2>
+                    <div class="row mx-auto w-75" data-masonary="{" percentPosition": true}">
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/sms.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">api.sms.et</h5>
+                                    <p class="card-body">a simple, efficient & cheap SMS platform for businesses.<br>
+                                        <code>python3</code>, <code>Django</code>, <code>Django ReST</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/api.sms.et_production" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/ocr.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">ocrspace (contributer)</h5>
-                                <p class="card-body">A Python library for using the <a href="https://ocr.space/ocrapi" target="_blank"
-                                    rel="noopener noreferrer">ocr.space API </a>to that can extract text from pictures as well as pdf files.<br>
-                                    <code>Python3</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/ocrspace" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/happy-review.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">happy-review-api</h5>
+                                    <p class="card-body">a simple api that connects to the happy-review UI to collect data.<br>
+                                        <code>python3</code>, <code>FastAPI</code>, <code>bootstrap</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/happy-review-api" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/pix2txt.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">pix2txt</h5>
-                                <p class="card-body">A Telegram bot for Optical Character Recognition (OCR) <a href="https://t.me/pix2txt_bot">telegram bot</a>
-                                    that extracts texts from any kind of pictures utilizing ocrspace.<br>
-                                    <code>Python3</code>, <code>Telethon</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/pix2txt" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/form-creator.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Django Form Creator (Contributer)</h5>
+                                    <p class="card-body">A Django application that lets users create forms.<br>
+                                    <code>Python3</code>, <code>Django</code>, <code>PyTests</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/django-form-creator" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/betting-tips.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Platinium Betting tips scraper</h5>
-                                <p class="card-body">A telegram bot that scrapes betting tips from websites and posts them on a telegram channel<br>
-                                    <code>Python3</code>, <code>Telethon</code>, <code>Beautiful Soup</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/platiniumBettingBot" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/ocr.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">ocrspace (contributer)</h5>
+                                    <p class="card-body">A Python library for using the <a href="https://ocr.space/ocrapi" target="_blank"
+                                        rel="noopener noreferrer">ocr.space API </a>to that can extract text from pictures as well as pdf files.<br>
+                                        <code>Python3</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/ocrspace" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/pokerbot.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">PokerbotChipsTracker</h5>
-                                <p class="card-body">A telegram bot that tracks chips giveaways that come up randomly, 
-                                    plays the table, and receives giveaways in PokerBot on telegram.<br>
-                                    <code>Python3</code>, <code>Telethon</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/PokerbotChipsTracker" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/pix2txt.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">pix2txt</h5>
+                                    <p class="card-body">A Telegram bot for Optical Character Recognition (OCR) <a href="https://t.me/pix2txt_bot">telegram bot</a>
+                                        that extracts texts from any kind of pictures utilizing ocrspace.<br>
+                                        <code>Python3</code>, <code>Telethon</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/pix2txt" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/trade_scraper.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">trade-scraper</h5>
-                                <p class="card-body">A scraper that gets the latest information on crypto prices and dumps the scraped data as a json file.<br>
-                                    <code>Python3</code>, <code>Beautiful Soup</code>, <code>Selenium</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/trade-scraper" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/betting-tips.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Platinium Betting tips scraper</h5>
+                                    <p class="card-body">A telegram bot that scrapes betting tips from websites and posts them on a telegram channel<br>
+                                        <code>Python3</code>, <code>Telethon</code>, <code>Beautiful Soup</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/platiniumBettingBot" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/qms.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">QMS</h5>
-                                <p class="card-body">A multi-screen queue management system for concerts, exhibitions, games and the like so attendants don't need to wait in line.<br>
-                                    <code>Python3</code>, <code>Django</code>, <code>bootstrap</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/QMS" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/pokerbot.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">PokerbotChipsTracker</h5>
+                                    <p class="card-body">A telegram bot that tracks chips giveaways that come up randomly, 
+                                        plays the table, and receives giveaways in PokerBot on telegram.<br>
+                                        <code>Python3</code>, <code>Telethon</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/PokerbotChipsTracker" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/verify_bot.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Verify Bot</h5>
-                                <p class="card-body">A bot integrated to an SMS platform to deliver the contents to users via Telegram.<br>
-                                    <code>Python3</code>, <code>FastAPI</code>, <code>Telethon</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/verify_bot_api" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/trade_scraper.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">trade-scraper</h5>
+                                    <p class="card-body">A scraper that gets the latest information on crypto prices and dumps the scraped data as a json file.<br>
+                                        <code>Python3</code>, <code>Beautiful Soup</code>, <code>Selenium</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/trade-scraper" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/reviewer_bot.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">SBReviewerBot</h5>
-                                <p class="card-body">A Telegram bot that will send review questions to a specific set of users once per day.<br>
-                                    <code>Python3</code>, <code>FastAPI</code>, <code>Telethon</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/SBReviewerBot" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/qms.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">QMS</h5>
+                                    <p class="card-body">A multi-screen queue management system for concerts, exhibitions, games and the like so attendants don't need to wait in line.<br>
+                                        <code>Python3</code>, <code>Django</code>, <code>bootstrap</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/QMS" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded">
-                            <img src="static/img/prev_imgs/rps.png" width="100%" height="100%">
-                            <hr class="mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">RPS</h5>
-                                <p class="card-body">My 1st foray into the python world...A terminal based Rock, Paper, Scissors game.<br>
-                                    <code>Python3</code>
-                                </p>
-                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/RPS" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/verify_bot.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Verify Bot</h5>
+                                    <p class="card-body">A bot integrated to an SMS platform to deliver the contents to users via Telegram.<br>
+                                        <code>Python3</code>, <code>FastAPI</code>, <code>Telethon</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/verify_bot_api" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/reviewer_bot.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">SBReviewerBot</h5>
+                                    <p class="card-body">A Telegram bot that will send review questions to a specific set of users once per day.<br>
+                                        <code>Python3</code>, <code>FastAPI</code>, <code>Telethon</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/SBReviewerBot" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow rounded col-sm-6 col-lg-4 mb-5">
+                            <div class="card shadow rounded">
+                                <img src="static/img/prev_imgs/rps.png" width="100%" height="100%">
+                                <hr class="mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">RPS</h5>
+                                    <p class="card-body">My 1st foray into the python world...A terminal based Rock, Paper, Scissors game.<br>
+                                        <code>Python3</code>
+                                    </p>
+                                    <a class="btn btn-outline-success" href="https://github.com/NegassaB/RPS" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-secondary container px-4 py-3" id="contact_me">
-                <h2 class="display-5 fw-light text-center">Contact Me</h2>
-                <div class="row align-items-center g-5 pt-5">
-                    <div class="col-lg-3"></div>
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <p class="lead">I'm always happy to try out new project, new opportunities and new challenges. You can reach me via the following: </p>
-                        <div class="row pt-4">
-                            <div class="col-lg-3 py-2">
-                                <a type="button" class="btn btn-outline-success btn-lg px-4" href="mailto:negassab16@gmail.com" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-mailbox2"></i>
-                                </a>
-                            </div>
-                            <div class="col-lg-3 py-2">
-                                <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://github.com/NegassaB" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-github"></i>
-                                </a>
-                            </div>
-                            <div class="col-lg-3 py-2">
-                                <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://reddit.com/u/NegassaB" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-reddit"></i>
-                                </a>
-                            </div>
-                            <div class="col-lg-3 pt-2">
-                                <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://t.me/NegassaB" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-telegram"></i>
-                                </a>
+                <div class="text-secondary container px-4 py-3" id="contact_me">
+                    <h2 class="display-5 fw-light text-center">Contact Me</h2>
+                    <div class="row align-items-center g-5 pt-5">
+                        <div class="col-lg-3"></div>
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <p class="lead">I'm always happy to try out new project, new opportunities and new challenges. You can reach me via the following: </p>
+                            <div class="row pt-4">
+                                <div class="col-lg-3 py-2">
+                                    <a type="button" class="btn btn-outline-success btn-lg px-4" href="mailto:negassab16@gmail.com" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-mailbox2"></i>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 py-2">
+                                    <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://github.com/NegassaB" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 py-2">
+                                    <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://reddit.com/u/NegassaB" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-reddit"></i>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 pt-2">
+                                    <a type="button" class="btn btn-outline-success btn-lg px-4" href="https://t.me/NegassaB" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-telegram"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                    <div class="col-md-4 d-flex align-items-center">
-                        <a href="#home" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                            <img src="static/img/logo.png" width="32" height="32">
-                        </a>
-                        <span class="mb-3 mb-md-0 text-muted">
-                            <a class="btn btn-outline-success btn-sm" href="https://github.com/NegassaB/negassab.github.io" target="_blank" rel="noopener noreferrer">
-                                Designed & built by Negassa Berhanu
+                <div class="container">
+                    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <a href="#home" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                                <img src="static/img/logo.png" width="32" height="32">
                             </a>
-                        </span>
-                    </div>
-                    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                        <li class="ms-3">
-                            <a class="btn btn-outline-success" href="https://github.com/NegassaB/" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github"></i>
-                            </a>
-                        </li>
-                        <li class="ms-3">
-                            <a class="btn btn-outline-success" href="https://reddit.com/u/NegassaB" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-reddit""></i>
-                            </a>
-                        </li>
-                        <li class="ms-3">
-                            <a class="btn btn-outline-success" href="https://t.me/NegassaB" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-telegram""></i>
-                            </a>
-                        </li>
-                    </ul>
-                </footer>
-            </div>
+                            <span class="mb-3 mb-md-0 text-muted">
+                                <a class="btn btn-outline-success btn-sm" href="https://github.com/NegassaB/negassab.github.io" target="_blank" rel="noopener noreferrer">
+                                    Designed & built by Negassa Berhanu
+                                </a>
+                            </span>
+                        </div>
+                        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                            <li class="ms-3">
+                                <a class="btn btn-outline-success" href="https://github.com/NegassaB/" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="btn btn-outline-success" href="https://reddit.com/u/NegassaB" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-reddit""></i>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="btn btn-outline-success" href="https://t.me/NegassaB" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-telegram""></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+                </div>
         </main>
         
         <script src="static/js/bootstrap.js" async defer></script>
