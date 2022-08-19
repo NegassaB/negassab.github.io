@@ -19,29 +19,37 @@
         <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon_io/favicon-16x16.png">
         <link rel="manifest" href="static/img/favicon_io/site.webmanifest">
     </head>
-    <body>
+    <body class="bg-light bg-opacity-50">
         <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
-        <nav class="navbar navbar-expand-md bg-transparent fixed-top">
+        <nav class="navbar navbar-expand-md bg-dark bg-opacity-10 fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home"><img src="static/img/logo.png" width="32" height="32"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse fw-bold" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link text-body active" aria-current="page" href="#home">
+                            <span  data-bs-toggle="collapse" data-bs-target=".navbar-collapse">Home</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about_me">About</a>
+                        <a class="nav-link text-body" href="#about_me">
+                            <span  data-bs-toggle="collapse" data-bs-target=".navbar-collapse">About</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#prev_works">Previous Works</a>
+                        <a class="nav-link text-body" href="#prev_works">
+                            <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">Previous Works</span>
+                        </a>
                     </li>
                 </ul>
                 <ul class="navbar-nav justify-content-end mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact_me">Contact Me</a>
+                        <a class="nav-link text-body" href="#contact_me">
+                            <span  data-bs-toggle="collapse" data-bs-target=".navbar-collapse">Contact Me</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-success" href="static/doc/betterCV.pdf" target="_blank" rel="noopener noreferrer">
@@ -83,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-11">
+            <div class="col-lg-12">
                 <div class="text-secondary container col-xxl-8 px-4 pt-5 pb-3" id="home">
                     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                         <div class="col-10 col-sm-8 col-lg-6">
@@ -91,7 +99,7 @@
                         </div>
                         <div class="col-lg-6">
                             <span><p>Hi, my name is</p></span>
-                            <h1 class="display-5 fw-bolder lh-1 mb-3">Negassa Berhanu</h1>
+                            <h1 class="display-5 fw-bolder lh-1 mb-3 text-body">Negassa Berhanu</h1>
                             <p class="text-lowercase lead fw-lighter">
                                 A Software Engineer with 5+ years of industrial experience in various Ethiopian companies 
                                 in the areas of management, backend development, UX design using multiple programming languages and
@@ -420,7 +428,7 @@
                 </div>
         </main>
         
-        <script src="static/js/bootstrap.js" async defer></script>
+        <script src="static/js/bootstrap.bundle.js" async defer></script>
         <script src="static/js/masonry.pkgd.min.js" async defer></script>
     </body>
 </html>
