@@ -4,13 +4,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting…</title>
-  <!-- Change the URL below to your target -->
-  <meta http-equiv="refresh" content="0; url=https://www.youware.com/project/q24rymbdnm" />
+  <!-- Redirect after 3 seconds; change URL as needed -->
+  <meta http-equiv="refresh" content="2; url=https://www.youware.com/project/q24rymbdnm">
+  <style>
+    /* Center everything */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+      font-size: 1.5em;
+    }
+
+    /* Progress bar container */
+    .progress-container {
+      width: 80%;
+      max-width: 400px;
+      background: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 10px;
+    }
+
+    /* Animated bar */
+    .progress-bar {
+      height: 100%;
+      background: #007bff;
+      width: 0%;
+      animation: fillBar 2s linear forwards;
+    }
+
+    @keyframes fillBar {
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Fallback link styling */
+    .fallback {
+      margin-top: 1em;
+      font-size: 0.9em;
+    }
+
+    .fallback a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-  <p>Redirecting to <a href="https://www.youware.com/project/q24rymbdnm">negassab.github.io</a>
-  </p>
+  <h1>Redirecting you now…</h1>
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+  <div class="fallback">
+    If you are not redirected automatically, <a href="https://www.youware.com/project/q24rymbdnm">click here</a>.
+  </div>
 </body>
 
 </html>
