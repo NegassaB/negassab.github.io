@@ -4,78 +4,801 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting…</title>
-  <meta http-equiv="refresh" content="2; url=https://www.youware.com/project/q24rymbdnm">
+  <meta name="description"
+    content="Negassa Berhanu - Software Engineer portfolio showcasing skills, projects, and contact information.">
+  <title>Negassa Berhanu | Software Engineer</title>
   <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    :root {
+      --primary-color: #6366f1;
+      --secondary-color: #4f46e5;
+      --dark-color: #1e293b;
+      --light-color: #f8fafc;
+      --text-color: #334155;
+      --border-color: #e2e8f0;
+    }
+
+    * {
       margin: 0;
-      padding: 1rem;
-      font-family: system-ui, sans-serif;
-      background: #f5f5f5;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: var(--text-color);
+      background-color: var(--light-color);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    header {
+      background-color: var(--light-color);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .hero {
+      padding: 10rem 0 5rem;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-image {
+      flex: 1;
       text-align: center;
     }
 
-    h1 {
-      margin-bottom: 1.5em;
+    .hero-image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary-color);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+    }
+
+    .hero-text h2 {
       font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
     }
 
-    .progress-container {
-      width: 100%;
-      max-width: 400px;
-      background: #ddd;
-      border-radius: 4px;
+    .hero-text p {
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: var(--dark-color);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary-color);
+    }
+
+    .about-content {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .skills-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .skills-category {
+      flex: 1;
+    }
+
+    .skills-category h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark-color);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .skill-item {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 0.5rem;
       overflow: hidden;
-      height: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .progress-bar {
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
       height: 100%;
-      background: #007bff;
-      width: 0%;
-      animation: fillBar 2s linear forwards;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
 
-    @keyframes fillBar {
-      from {
-        width: 0%;
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark-color);
+    }
+
+    .project-content p {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tag {
+      background-color: var(--border-color);
+      padding: 0.3rem 0.6rem;
+      border-radius: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      background-color: var(--primary-color);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .social-link {
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: var(--primary-color);
+    }
+
+    .highlight-blue {
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
       }
 
-      to {
-        width: 100%;
+      .about-content {
+        flex-direction: column;
       }
-    }
 
-    .fallback {
-      margin-top: 1.5em;
-      font-size: 0.95rem;
-    }
+      .skills-container {
+        flex-direction: column;
+      }
 
-    .fallback a {
-      color: #007bff;
-      text-decoration: none;
-    }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
 
-    .fallback a:hover {
-      text-decoration: underline;
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>Redirecting you now…</h1>
-  <div class="progress-container">
-    <div class="progress-bar"></div>
-  </div>
-  <div class="fallback">
-    If you are not redirected automatically, <a href="https://www.youware.com/project/q24rymbdnm">click here</a>.
-  </div>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">NB</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg"
+            alt="Negassa Berhanu">
+        </div>
+        <div class="hero-text">
+          <h1>Negassa Berhanu</h1>
+          <h2>Software Developer</h2>
+          <p>Hello there! My name is Negassa and I am a software engineer with a strong background in Linux
+            system administration, DevOps, and backend development. I enjoy building tools and automating
+            workflows. With a sharp focus on efficiency and simplicity, I strive to write code that is
+            maintainable and effective. I enjoy creating dope things that live on computers, local or
+            remote. My interest in computers started wayback when I was a 9 year old and my father brought
+            home a heavy laptop. I tried to type my name on there and the moment I pressed N and I saw it on
+            the screen I was hooked. There was no looking back from there on.</p>
+          <a href="#contact" class="btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">My introduction</p>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a graduate of Adama Science & Technology University and have built several bots, websites,
+            web services, SMS services, backend services & APIs etc. My main focus these days is building
+            accessible, simple yet powerful tools & digital products that can simplify business processes
+            and their interactions with their customers.</p>
+          <p>Fast forward to today, I've worked on a variety of projects that have helped businesses
+            streamline their operations and improve customer engagement. I'm passionate about creating
+            solutions that are not only technically sound but also user-friendly and accessible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <div class="container">
+      <h2 class="section-title">Education & Certifications</h2>
+      <p class="section-subtitle">My qualifications</p>
+
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3>Academic Education</h3>
+          <div class="skill-item" style="display: block; padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark-color);">B.Sc in Software Engineering</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 0.3rem;">Adama Science & Technology University</p>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Certifications</h3>
+          <div class="skill-item" style="display: block; padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark-color);">Certificate in Project Management
+            </h4>
+            <p style="font-size: 0.9rem; margin-bottom: 0.3rem;">Addis Ababa University</p>
+          </div>
+
+          <div class="skill-item" style="display: block; padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark-color);">Associate Android Developer</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 0.3rem;">Pluralsight</p>
+          </div>
+
+          <div class="skill-item" style="display: block; padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark-color);">Core Java, HTML5, CSS3, JavaScript
+            </h4>
+            <p style="font-size: 0.9rem; margin-bottom: 0.3rem;">Sololearn</p>
+          </div>
+
+          <div class="skill-item" style="display: block; padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark-color);">Codelab Sessions</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 0.3rem;">GDG Addis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">My technical expertise</p>
+
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3>Technical Skills</h3>
+          <div class="skills-list">
+            <div class="skill-item highlight-blue">Python</div>
+            <div class="skill-item highlight-blue">Django</div>
+            <div class="skill-item highlight-blue">Django ReST Framework</div>
+            <div class="skill-item highlight-blue">Django Channels</div>
+            <div class="skill-item highlight-blue">DjangoRedis</div>
+            <div class="skill-item highlight-blue">PostgreSQL</div>
+            <div class="skill-item highlight-blue">SQLite</div>
+            <div class="skill-item highlight-blue">MySQL</div>
+            <div class="skill-item highlight-blue">MariaDB</div>
+            <div class="skill-item highlight-blue">Pandas</div>
+            <div class="skill-item highlight-blue">Git & GitHub</div>
+            <div class="skill-item highlight-blue">Telegram Bot Development(Telethon)</div>
+            <div class="skill-item highlight-blue">FastAPI</div>
+            <div class="skill-item highlight-blue">Beautiful Soup</div>
+            <div class="skill-item highlight-blue">Selenium</div>
+            <div class="skill-item highlight-blue">HTML5</div>
+            <div class="skill-item highlight-blue">CSS3</div>
+            <div class="skill-item highlight-blue">JavaScript</div>
+            <div class="skill-item highlight-blue">Core Java</div>
+            <div class="skill-item highlight-blue">Web Scraping</div>
+            <div class="skill-item highlight-blue">Bash Scripting</div>
+            <div class="skill-item highlight-blue">Linux Administration</div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Business Skills</h3>
+          <div class="skills-list">
+            <div class="skill-item highlight-blue">Proposal Writing</div>
+            <div class="skill-item highlight-blue">Business Development</div>
+            <div class="skill-item highlight-blue">Project Management</div>
+            <div class="skill-item highlight-blue">Analytical Skills</div>
+            <div class="skill-item highlight-blue">Direct Engagements</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle"><i>Some of the things I've built</i></p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2018/06/08/00/48/developer-3461405_640.png" alt="SMS Platform">
+          </div>
+          <div class="project-content">
+            <h3>api.sms.et</h3>
+            <p>A simple, efficient & cheap SMS platform for businesses.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Django</span>
+              <span class="project-tag">Django REST Framework</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_640.png" alt="Review API">
+          </div>
+          <div class="project-content">
+            <h3>happy-review-api</h3>
+            <p>API that connects to the happy-review UI to collect data.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Bootstrap</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_640.jpg" alt="OCR Library">
+          </div>
+          <div class="project-content">
+            <h3>ocrspace (Contributor)</h3>
+            <p>A Python library for using the ocr.space API to extract text from pictures and PDF
+              files.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg" alt="OCR Bot">
+          </div>
+          <div class="project-content">
+            <h3>pix2txt</h3>
+            <p>A Telegram bot for Optical Character Recognition (OCR) that extracts texts from any
+              kind
+              of
+              pictures utilizing ocrspace.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Telethon</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2018/08/14/18/07/programmer-3606210_640.png"
+              alt="Betting Tips Scraper">
+          </div>
+          <div class="project-content">
+            <h3>Platinium Betting Tips Scraper</h3>
+            <p>A telegram bot that scrapes betting tips from websites and posts them on a telegram
+              channel.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Telethon</span>
+              <span class="project-tag">Beautiful Soup</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2016/11/18/18/37/programming-1836330_640.png" alt="Poker Bot">
+          </div>
+          <div class="project-content">
+            <h3>PokerbotChipsTracker</h3>
+            <p>A telegram bot that tracks chips giveaways that come up randomly, plays the table,
+              and
+              receives giveaways in PokerBot on telegram.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Telethon</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/14/16/man-1839500_640.jpg" alt="Crypto Scraper">
+          </div>
+          <div class="project-content">
+            <h3>trade-scraper</h3>
+            <p>A scraper that gets the latest information on crypto prices and dumps the scraped
+              data as
+              a
+              json file.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Beautiful Soup</span>
+              <span class="project-tag">Selenium</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg"
+              alt="Queue System">
+          </div>
+          <div class="project-content">
+            <h3>QMS (Queue Management System)</h3>
+            <p>A multi-screen queue management system for concerts, exhibitions, games, etc so
+              attendants
+              don't waste their time simply standing in line.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Django</span>
+              <span class="project-tag">Bootstrap</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg"
+              alt="Verify Bot">
+          </div>
+          <div class="project-content">
+            <h3>Verify Bot</h3>
+            <p>A bot integrated to an SMS platform to deliver the contents to users via Telegram.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Telethon</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg"
+              alt="Polls Website">
+          </div>
+          <div class="project-content">
+            <h3>Polls Website</h3>
+            <p>Polls website for USAID event that asks, accepts and aggregates the submissions from
+              the
+              event-goers.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python3</span>
+              <span class="project-tag">Django</span>
+              <span class="project-tag">HTML/CSS</span>
+            </div>
+            <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://i0.wp.com/www.omgubuntu.co.uk/wp-content/uploads/2017/04/indicator-kde-connect-sms.jpg"
+                alt="CLI-based SMS Sender">
+            </div>
+            <div class="project-content">
+              <h3>CLI-based SMS Sender</h3>
+              <p>Python-based tool to send SMS from command-line with a Raspberry Pi + USB GSM module.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Systemd</span>
+                <span class="project-tag">Raspberry Pi</span>
+              </div>
+              <a href="https://github.com/NegassaB" class="btn" target="_blank">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Get in touch</p>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                </path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <span><a href="mailto:negassab16@gmail.com">negassab16@gmail.com</a></span>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>Addis Ababa, Ethiopia</span>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6">
+                </path>
+                <line x1="2" y1="20" x2="2" y2="20"></line>
+              </svg>
+            </div>
+            <a href="https://t.me/NegassaB" target="_blank">Telegram: @NegassaB</a>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <a href="69ne29j30m.pdf" class="btn" style="margin-left: 10px;" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/NegassaB" class="social-link" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://t.me/NegassaB" class="social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 3L2 12l5 2 2 5 3-3 4 3 6-16z" />
+          </svg>
+        </a>
+        <a href="mailto:negassab16@gmail.com" class="social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+
+        </a>
+      </div>
+      <p>&copy; 2023 Negassa Berhanu. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
