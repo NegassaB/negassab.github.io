@@ -3,11 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting…</title>
-  <!-- Redirect after 3 seconds; change URL as needed -->
   <meta http-equiv="refresh" content="2; url=https://www.youware.com/project/q24rymbdnm">
   <style>
-    /* Center everything */
     body {
       display: flex;
       flex-direction: column;
@@ -15,19 +14,20 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      font-family: sans-serif;
+      padding: 1rem;
+      font-family: system-ui, sans-serif;
       background: #f5f5f5;
       color: #333;
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 1em;
-      font-size: 1.5em;
+      margin-bottom: 1.5em;
+      font-size: 1.5rem;
     }
 
-    /* Progress bar container */
     .progress-container {
-      width: 80%;
+      width: 100%;
       max-width: 400px;
       background: #ddd;
       border-radius: 4px;
@@ -35,7 +35,6 @@
       height: 10px;
     }
 
-    /* Animated bar */
     .progress-bar {
       height: 100%;
       background: #007bff;
@@ -53,15 +52,18 @@
       }
     }
 
-    /* Fallback link styling */
     .fallback {
-      margin-top: 1em;
-      font-size: 0.9em;
+      margin-top: 1.5em;
+      font-size: 0.95rem;
     }
 
     .fallback a {
       color: #007bff;
       text-decoration: none;
+    }
+
+    .fallback a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
