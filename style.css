@@ -1,0 +1,333 @@
+:root {
+    --bg: #0b0e14;
+    --card-bg: #141923;
+    --accent: #3b82f6;
+    /* Modern Blue */
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    /* Montserrat is the high-end equivalent to Proxima Nova */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.logo {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mono {
+    font-family: 'Fira Code', monospace;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+/* Navigation */
+#navbar {
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    background: rgba(11, 14, 20, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-btn {
+    background: var(--accent);
+    color: white !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+    padding: 120px 0 100px;
+}
+
+.kicker {
+    font-family: 'Fira Code';
+    color: var(--accent);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.2rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--text-dim);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-dim);
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.primary {
+    background: var(--accent);
+    color: white;
+    margin-right: 1rem;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.secondary {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Grid Logic */
+.section {
+    padding: 80px 0;
+}
+
+.alt-bg {
+    background: var(--card-bg);
+    border-radius: 60px 60px 0 0;
+}
+
+.label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: 0.4s ease;
+}
+
+.feat {
+    border-top: 4px solid var(--accent);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.card-type {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.card-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.arc {
+    padding: 1.8rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Experience Section */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.edu-card {
+    margin-top: 1rem;
+}
+
+.stack-item {
+    margin-bottom: 2rem;
+}
+
+.stack-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.stack-item p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    padding: 5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-info p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.foot-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.foot-links a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 800px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero p {
+        margin: 0 auto 3rem;
+    }
+}
