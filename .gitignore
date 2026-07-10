@@ -1,2 +1,12 @@
 # vscode files
 .vscode/
+
+# Google Verification files
+google*.html
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
