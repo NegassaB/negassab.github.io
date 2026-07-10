@@ -1,0 +1,21 @@
+# Negassa Berhanu
+Senior Software Engineer (8+ Years)
+Addis Ababa, Ethiopia
+
+## Bio
+Specialist in Python backend architecture, high-performance APIs, and data automation. Creator of public repositories including pix2txt and ocrspace.
+
+## Technical Skills
+- Backend: Python (Expert), Django, FastAPI, DRF, WebSockets.
+- Data: PostgreSQL, Redis, Scraping, Analytics.
+- Philosophy: "Git push, git paid."
+
+## Key Projects
+- pix2txt: OCR Telegram Bot.
+- ocrspace: Python Wrapper for OCR.space API.
+- Pokerbot Tracker: Financial and chip tracking for poker automation.
+
+## Contact
+- GitHub: https://github.com/NegassaB
+- LinkedIn: https://www.linkedin.com/in/negassa-berhanu/
+- Email: negassab16@gmail.com
