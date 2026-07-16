@@ -61,7 +61,9 @@ Action: Block.
 ```
 
 Result: **Instant relief**. My server load dropped by 80% within seconds as Cloudflare began dropping these requests before they reached Hetzner.
+
 ![Cloudflare Security Event Sample Log]({{'/assets/img/cloudflare-event.gif' | relative_url }})
+
 *Real-time Cloudflare Security Events showing incoming bot traffic being dropped at the edge.*
 
 ### 2. Fixing the "Real IP" Blind Spot
