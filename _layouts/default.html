@@ -22,38 +22,12 @@
         "knowsAbout": ["Python", "Django", "PostgreSQL", "API Architecture", "Mbox", "Mbox Splitter"]
     }
     </script>
-    <script>
-        async function loadComponent(id, file) {
-            const element = document.getElementById(id);
-            if (!element) {
-                console.error(`Element with id "${id}" not found in this HTML file.`);
-                return;
-            }
+    <!-- Change your CSS link to this -->
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
-            try {
-                const response = await fetch(file);
-                if (response.ok) {
-                    element.innerHTML = await response.text();
-                } else {
-                    console.error(`Failed to load ${file}: ${response.status}`);
-                }
-            } catch (err) {
-                console.error(`Fetch error for ${file}:`, err);
-            }
-        }
+    <!-- If you have images in your navbar/header -->
+    <img src="{{ '/assets/logo.png' | relative_url }}" alt="Logo">
 
-        // Use DOMContentLoaded to make sure the HTML is ready before running
-        document.addEventListener("DOMContentLoaded", function () {
-            // Check your URL - if you are inside /blog/, you need ../
-            // If you are on the homepage, you don't.
-            const prefix = window.location.pathname.includes('/blog/') ? '../' : './';
-
-            loadComponent('site-header', prefix + 'includes/header.html');
-            loadComponent('site-footer', prefix + 'includes/footer.html');
-        });
-    </script>
-
-    <link rel="stylesheet" href="style.css">
     {% seo %}
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;800&family=Montserrat:wght@300;400;500;600;700&family=Fira+Code&display=swap"
@@ -90,7 +64,8 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <!-- Change your JS script to this (if you have one) -->
+    <script src="{{ '/script.js' | relative_url }}"></script>
 </body>
 
 </html>
