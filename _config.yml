@@ -1,6 +1,0 @@
-name: Negassa B. Portfolio
-title: Negassa B.
-description: Software Engineer + DevOps
-remote_theme: pages-themes/minimal@v0.2.0 # Or "cayman", "architect", "merlot"
-plugins:
-  - jekyll-remote-theme

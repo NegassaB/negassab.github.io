@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The 521 That Wouldn't Die - Negassa B.</title>
+    <!-- Link your existing CSS here -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Reusable Script -->
+    <script>
+        function loadComponent(id, file) {
+            fetch(file).then(r => r.text()).then(d => document.getElementById(id).innerHTML = d);
+        }
+        window.onload = function () {
+            loadComponent('site-header', '/includes/header.html');
+            loadComponent('site-footer', '/includes/footer.html');
+        };
+    </script>
+</head>
+
+<body>
+    <div id="site-header"></div> <!-- Navigation will appear here -->
+
+    <main class="container" style="max-width: 800px; margin: 50px auto; padding: 20px;">
+        <h1>The 521 That Wouldn't Die: How I Saved My Django API</h1>
+        <p><em>Published July 16, 2026</em></p>
+
+        <hr>
+
+        <p>Yesterday, my production API went dark with the dreaded <strong>Cloudflare Error 521</strong>. Here is how I
+            crushed the bot attack suffocating my server.</p>
+
+        <h3>The Mystery</h3>
+        <p>My PWA was working, but the API was timing out. Using <code>curl</code>, I confirmed the server was dropping
+            packets.</p>
+
+        <h3>The Solution</h3>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px;"><code>
+# Cloudflare WAF Rule
+(lower(http.request.uri.path) contains ".php") or 
+(http.request.uri.path contains ".env")
+        </code></pre>
+
+        <p>Blocking .php requests at the edge dropped server load by 80% instantly. I then configured Nginx to see real
+            IPs using <code>real_ip_header CF-Connecting-IP;</code> so Fail2Ban could do its job.</p>
+
+        <a href="/blog/index.html">← Back to Blog</a>
+    </main>
+
+    <div id="site-footer"></div> <!-- Footer will appear here -->
+</body>
+
+</html>
