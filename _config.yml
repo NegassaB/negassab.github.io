@@ -1,0 +1,11 @@
+title: Negassa B. Portfolio
+description: Software Engineer & DevOps
+url: "https://negassab.github.io"
+baseurl: ""
+
+# Standard GitHub Plugins
+plugins:
+  - jekyll-seo-tag
+
+# This keeps your URLs clean (e.g., negassab.github.io/blog instead of blog.html)
+permalink: /:title/
