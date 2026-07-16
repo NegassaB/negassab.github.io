@@ -1,37 +1,56 @@
 ---
-layout: default
-title: Blog
+layout: null
 ---
+<!DOCTYPE html>
+<html>
 
-<section class="blog-section">
-    <h1>Engineering War Stories</h1>
-    <p>Deep dives into DevOps, Security, Software Engineering and D3evelopment.</p>
+<head>
+    <!-- PASTE YOUR PORTFOLIO'S <HEAD> CONTENT HERE (CSS links, etc.) -->
+    <title>Blog - Negassa B.</title>
+</head>
 
-    <hr>
+<body>
+    <nav id="navbar">
+        <div class="container nav-box">
+            <a href="#" class="logo">Negassa<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#about">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="mailto:negassab16@gmail.com" class="nav-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <ul class="post-list" style="list-style: none; padding: 0;">
-        {% for post in site.posts %}
-        <li style="margin-bottom: 40px;">
-            <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}"
-                    style="text-decoration: none; color: #007bff;">
-                    {{ post.title | escape }}
-                </a>
-            </h2>
+    <section class="blog-content">
+        <h1>Engineering War Stories</h1>
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <p>{{ post.date | date: "%b %d, %Y" }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 
-            <span class="post-meta" style="color: #666; font-size: 0.9em;">
-                {{ post.date | date: "%B %d, %Y" }} •
-                {% for category in post.categories %}
-                <span class="category-tag">{{ category }}</span>
-                {% endfor %}
-            </span>
+    <footer>
+        <div class="container footer-wrap">
+            <div class="foot-info">
+                <p class="mono">"Git push, git paid."</p>
+                <p>© <span id="year"></span> Negassa Berhanu</p>
+            </div>
+            <div class="foot-links">
+                <a href="https://t.me/NegassaB">TELEGRAM</a>
+                <a href="https://github.com/NegassaB">GITHUB</a>
+                <a href="https://stackoverflow.com/users/10781096/negassab">STACK OVERFLOW</a>
+                <a href="https://www.linkedin.com/in/negassa-berhanu-067ba543/">LINKEDIN</a>
+                <a href="https://www.reddit.com/user/NegassaB/">REDDIT</a>
+            </div>
+        </div>
+    </footer>
 
-            <p class="post-excerpt" style="margin-top: 10px;">
-                {{ post.excerpt | strip_html | truncatewords: 40 }}
-            </p>
+</body>
 
-            <a href="{{ post.url | relative_url }}" style="font-weight: bold;">Read More →</a>
-        </li>
-        {% endfor %}
-    </ul>
-</section>
+</html>
