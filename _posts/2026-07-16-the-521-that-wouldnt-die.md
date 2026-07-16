@@ -14,7 +14,7 @@ Yet, the internet kept telling me I was offline. Here is how I debugged, isolate
 
 ## The Mystery: A Tale of Two Subdomains
 
-My setup for [CLiQ](https://prod.cliqapp.co) seemed solid:
+My setup for [CLiQ](https://cliqapp.co) seemed solid:
 *   **Backend:** Django & DRF running via Systemd.
 *   **Server:** A Hetzner VPS.
 *   **Proxy:** Nginx.
@@ -34,6 +34,7 @@ Result: Connection timed out.
 This confirmed the issue wasn't a Cloudflare glitch. My server was actively dropping packets or was so overwhelmed it couldn't complete a TCP handshake. I dove into the Nginx access logs and found a digital war zone.
 
 ## The Bot Storm
+
 The logs were moving faster than I could read. Thousands of requests per minute were hitting the server from rotating IPs, looking for vulnerabilities that didn't exist:
 ```text
 "GET /ups.php HTTP/1.1" 401
@@ -47,6 +48,7 @@ But even though Nginx was correctly returning a *401 Unauthorized*, the sheer vo
 ## The Multi-Layered Fix
 
 ### 1. Moving the Battlefield to the Edge (Cloudflare WAF)
+
 The most efficient way to stop an attack is to make sure it never touches your server. I moved the "rejection" logic to Cloudflare’s global edge network.
 I built a custom WAF rule to block any request that even smelled like a PHP or WordPress scan.
 The Expression:
@@ -59,8 +61,11 @@ Action: Block.
 ```
 
 Result: **Instant relief**. My server load dropped by 80% within seconds as Cloudflare began dropping these requests before they reached Hetzner.
+![Cloudflare Security Event Sample Log]({{'/assets/img/cloudflare-event.gif' | relative_url }})
+*Real-time Cloudflare Security Events showing incoming bot traffic being dropped at the edge.*
 
 ### 2. Fixing the "Real IP" Blind Spot
+
 I realized why my Fail2Ban wasn't stopping them: It was blind.
 By default, Nginx sees all Cloudflare traffic as coming from Cloudflare’s proxy IPs. When Fail2Ban saw an attack, it thought Cloudflare was the attacker. I had to tell Nginx to look inside the headers to see the real visitor -- even though my drf logger was seeing the source IP.
 I created /etc/nginx/conf.d/cloudflare.conf:
@@ -75,6 +80,7 @@ real_ip_recursive on;
 With this, my logs finally showed the actual IPs of the attackers, allowing my internal firewall to start banning individual bad actors automatically.
 
 ## 3. Lessons Learned
+
 - Block early, block often: If you don't use PHP, block .php at the DNS level. Don't let your server waste a single CPU cycle on a request you know is fake.
 - Logs can lie: If you use a proxy like Cloudflare, your logs are lying to you until you configure the realip module.
 - Monitor the "Noise": A 521 error isn't always a crash. Sometimes, it's just a server that's too busy being bullied by bots to respond to legitimate traffic.
