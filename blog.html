@@ -1,0 +1,37 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="blog-section">
+    <h1>Engineering War Stories</h1>
+    <p>Deep dives into DevOps, Security, Software Engineering and D3evelopment.</p>
+
+    <hr>
+
+    <ul class="post-list" style="list-style: none; padding: 0;">
+        {% for post in site.posts %}
+        <li style="margin-bottom: 40px;">
+            <h2>
+                <a class="post-link" href="{{ post.url | relative_url }}"
+                    style="text-decoration: none; color: #007bff;">
+                    {{ post.title | escape }}
+                </a>
+            </h2>
+
+            <span class="post-meta" style="color: #666; font-size: 0.9em;">
+                {{ post.date | date: "%B %d, %Y" }} •
+                {% for category in post.categories %}
+                <span class="category-tag">{{ category }}</span>
+                {% endfor %}
+            </span>
+
+            <p class="post-excerpt" style="margin-top: 10px;">
+                {{ post.excerpt | strip_html | truncatewords: 40 }}
+            </p>
+
+            <a href="{{ post.url | relative_url }}" style="font-weight: bold;">Read More →</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
