@@ -1,6 +1,11 @@
-name: Negassa B. Portfolio
-title: Negassa B.
-description: Software Engineer + DevOps
-remote_theme: pages-themes/minimal@v0.2.0 # Or "cayman", "architect", "merlot"
+title: Negassa B. Portfolio
+description: Software Engineer & DevOps
+url: "https://negassab.github.io"
+baseurl: ""
+
+# Standard GitHub Plugins
 plugins:
-  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# This keeps your URLs clean (e.g., negassab.github.io/blog instead of blog.html)
+permalink: /:title/

@@ -1,56 +1,16 @@
 ---
-layout: null
+layout: default
+title: Blog
 ---
-<!DOCTYPE html>
-<html>
-
-<head>
-    <!-- PASTE YOUR PORTFOLIO'S <HEAD> CONTENT HERE (CSS links, etc.) -->
-    <title>Blog - Negassa B.</title>
-</head>
-
-<body>
-    <nav id="navbar">
-        <div class="container nav-box">
-            <a href="#" class="logo">Negassa<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#about">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="mailto:negassab16@gmail.com" class="nav-btn">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="blog-content">
-        <h1>Engineering War Stories</h1>
-        <ul>
-            {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <p>{{ post.date | date: "%b %d, %Y" }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <footer>
-        <div class="container footer-wrap">
-            <div class="foot-info">
-                <p class="mono">"Git push, git paid."</p>
-                <p>© <span id="year"></span> Negassa Berhanu</p>
-            </div>
-            <div class="foot-links">
-                <a href="https://t.me/NegassaB">TELEGRAM</a>
-                <a href="https://github.com/NegassaB">GITHUB</a>
-                <a href="https://stackoverflow.com/users/10781096/negassab">STACK OVERFLOW</a>
-                <a href="https://www.linkedin.com/in/negassa-berhanu-067ba543/">LINKEDIN</a>
-                <a href="https://www.reddit.com/user/NegassaB/">REDDIT</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+<section style="max-width: 800px; margin: 50px auto; padding: 20px;">
+    <h1>Engineering War Stories</h1>
+    <ul style="list-style: none; padding: 0;">
+        {% for post in site.posts %}
+        <li style="margin-bottom: 30px;">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <small>{{ post.date | date: "%b %d, %Y" }}</small>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
