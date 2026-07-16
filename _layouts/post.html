@@ -1,13 +1,17 @@
 ---
 layout: default
 ---
-<article style="max-width: 800px; margin: 50px auto; padding: 20px;">
+<article class="post-container" style="max-width: 800px; margin: 50px auto; padding: 20px; color: white;">
     <h1>{{ page.title }}</h1>
-    <p style="color: #666;">Published on {{ page.date | date: "%B %d, %Y" }}</p>
-    <hr>
+    <p style="opacity: 0.6;">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+
+    <hr style="border: 0; border-top: 1px solid #444; margin: 20px 0;">
+
     <div class="post-content">
         {{ content }}
     </div>
-    <br>
-    <a href="/blog">← Back to Blog</a>
+
+    <div style="margin-top: 50px;">
+        <a href="/blog" class="back-link">← Back to Blog</a>
+    </div>
 </article>

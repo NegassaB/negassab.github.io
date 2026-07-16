@@ -331,3 +331,33 @@ footer {
         margin: 0 auto 3rem;
     }
 }
+
+/* 1. Fix links in the Blog List (blog.html) */
+.blog-section a,
+.post-link {
+    color: #ffffff !important;
+    /* Forces links to be white */
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+.blog-section a:hover,
+.post-link:hover {
+    opacity: 0.7;
+}
+
+/* 2. Fix links inside the actual Blog Post content (Markdown output) */
+.post-content a {
+    color: #ffffff !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.post-content a:hover {
+    color: #cccccc !important;
+}
+
+/* 3. Fix the "Back to Blog" link at the bottom */
+article a {
+    color: #ffffff !important;
+}
