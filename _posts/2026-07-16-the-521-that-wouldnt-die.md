@@ -80,4 +80,4 @@ With this, my logs finally showed the actual IPs of the attackers, allowing my i
 - Monitor the "Noise": A 521 error isn't always a crash. Sometimes, it's just a server that's too busy being bullied by bots to respond to legitimate traffic.
 - CLiQ is now back up and faster than ever. My Cloudflare "Security Events" tab is now a satisfying wall of "Blocked" requests from across the globe.
 
-*Follow my journey building CLiQ at https://cliqapp.co or check out my other projects on [github](https://negassab.github.io/)*
+*Follow my journey building [CLiQ](https://cliqapp.co) or check out my other projects on [github](https://negassab.github.io/)*
