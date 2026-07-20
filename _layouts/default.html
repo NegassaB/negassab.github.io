@@ -28,12 +28,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;800&family=Montserrat:wght@300;400;500;600;700&family=Fira+Code&display=swap"
         rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="alternate icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
 </head>
 
 <body>
     <nav id="navbar">
         <div class="container nav-box">
             <a href="/" class="logo">Negassa<span>.</span></a>
+
+            <!-- Add this Toggle Button -->
+            <button class="menu-toggle" aria-label="Open Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog">Blog</a></li>

@@ -313,22 +313,70 @@ footer {
     color: var(--white);
 }
 
+/* Mobile Menu Toggle Styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: 0.3s;
+}
+
 @media (max-width: 800px) {
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .menu-toggle {
+        display: flex;
+        /* Shows the hamburger only on mobile */
+        z-index: 1001;
     }
 
     .nav-links {
         display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--card-bg);
+        padding: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Shown when JS toggles 'active' */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .nav-links a {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    /* Fix Blog visibility on mobile */
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .post-container,
+    .blog-section {
+        padding-top: 2rem !important;
+        width: 100% !important;
     }
 
     .hero {
-        text-align: center;
-    }
-
-    .hero p {
-        margin: 0 auto 3rem;
+        padding: 80px 0 60px;
     }
 }
 
